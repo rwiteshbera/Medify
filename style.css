@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.app{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100vh;
+}
+
+.video-container video{
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    z-index: -10;
+}
+
+.timer,.audio-player,.sound-picker{
+    height: 80%;
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.timer{
+    padding-top: 10rem;
+    /* background-color:lightblue; */
+    display: grid;
+    grid-template-rows: repeat(4, 3rem);
+    justify-items: end;
+    row-gap: 2rem;
+}
+
+.timer-btn{
+    color: white;
+    height: 8vh;
+    width: 10vw;
+    border-radius: 2rem;
+    border: 3px solid white;
+    font-size: 1.3rem;
+    background-color: transparent;
+    transition: all 0.5s ease;
+}
+
+.timer-btn:hover{
+    cursor: pointer;
+    color: black;
+    background-color: white;
+}
+
+.audio-player{
+    /* background-color: lightgreen; */
+    height: 80%;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.audio-player svg{
+    position: absolute;
+    height: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+.time-display{
+    position: absolute;
+    bottom: 15%;
+    color: white;
+    font-size: 2rem;
+}
+
+.sound-picker{
+    margin-top: 20rem;
+    display: grid;
+    grid-template-rows: repeat(2, 8rem);
+    justify-items: start;
+    row-gap: 10px;
+    transition: all 1s ease;
+}
+
+.sound-picker button{
+    border: hidden;
+    padding: 10px;
+    background-color: transparent;
+    cursor: pointer;
+ 
+}
+
+.sound-picker button :hover{
+    background-color: rgb(2, 158, 10);
+    border-radius: 2rem;
+    -webkit-user-drag: none;
+}
+
